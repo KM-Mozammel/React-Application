@@ -5,15 +5,22 @@ import ContactPage from '../src/components/contact/ContactPage';
 import AboutPage from '../src/components/about/AboutPage';
 import HomePage from '../src/components/home/HomePage';
 import Footer from '../src/components/footer/Footer';
+
 import ApiFetch from '../src/components/API/ApiFetch';
+import Insert from './components/API/Insert';
+import DeleteByID from '../src/components/API/delete';
 
 function GetData() {
+  const style = {
+    textDecoration: "none",
+    marginTop: "10px",
+    marginBottom: "10px",
+  }
   return (
     <div>
-      <h2>Getting data from API:</h2>
+      <h5><a style={style} href='/insert'>Create new Company</a></h5>
       <ApiFetch />
     </div>
-    
   );
 }
 
@@ -26,6 +33,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/data" element={<GetData />} />
+        <Route path="/insert" element={<Insert />} />
+        <Route path="/delete" element={<DeleteByID />} />
       </Routes>
       <Footer />
     </Router>

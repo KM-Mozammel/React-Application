@@ -1,4 +1,4 @@
-form{
+/* form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,10 +11,11 @@ input, textarea{
     font-size: 1.4rem;
     margin: 0px 10px;
     border-radius: 5px;
-    width: 250px;
-    height: 50px;
+    width: 200px;
+    height: 30px;
     border: none;
-    background-color: rgba(90, 133, 202, 0.5);
+    margin: 0px 10px;
+    background-color: rgba(90, 133, 202, 0.158);
 }
 input:focus{
     background-color: #fff;
@@ -24,7 +25,9 @@ input:focus{
 
 button{
     border: none;
-    height: 50px;
+    height: 40px;
+
+    padding: 10px 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.7rem;
 }
@@ -32,4 +35,5 @@ button{
 label{
     font-size: 1.7rem;
     padding-right: 10px;
-}
+    margin: 0px 10px;
+} */

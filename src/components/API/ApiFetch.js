@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Styel from './apifetch.css';
+import './apifetch.css'; // Ensure this file exists and contains your styles
+import { Link } from 'react-router-dom';
 
 function ApiFetch() {
   const [data, setData] = useState([]);
@@ -16,24 +17,35 @@ function ApiFetch() {
   }, []);
 
   return (
-    <table className='table'>
-      <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Country</th>
-        <th>Employee</th>
-      </tr>
-        {data.map(item => (
+    <div className="apifetch-container">
+      <h2>Company List</h2>
+      <table className='table'>
+        <thead>
           <tr>
-            <td>{item.id}</td>
-            <td>{item.name}</td>
-            <td>{item.address}</td>
-            <td>{item.country}</td>
-            <td>{item.employees}</td>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Country</th>
+            <th>Action</th>
           </tr>
-        ))}
-    </table>
+        </thead>
+        <tbody>
+          {data.map(item => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.address}</td>
+              <td>{item.country}</td>
+              <td>
+                <a href={`edit/${item.id}`}>Edit</a> 
+                <br/>
+                <a href={`delete/${item.id}`}>Delete</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

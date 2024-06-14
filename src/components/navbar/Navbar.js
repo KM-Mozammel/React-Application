@@ -22,7 +22,8 @@ function Navbar() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/data" style={red()}>Get Data</Link></li>
+        <li><Link to="/data" >Get Data</Link></li>
+        <li><Link to="/delete" style={red()}>Operation</Link></li>
       </ul>
       <div>
         <span className='menu-bars'>
